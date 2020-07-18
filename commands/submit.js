@@ -8,6 +8,8 @@ exports.config = {
     description: "A command that will help you with submitting assignments.",
     usage: "submit",
     category: "Miscellaneous",
+    cooldown: 30,
+    guildOnly: true
 };
 
 exports.run = async (bot, message, args) => {
@@ -19,7 +21,8 @@ exports.run = async (bot, message, args) => {
     for (let i = 0; i < attachs.array().length; i++) currentAttachs.push(attachs.array()[i].url)
 
     for (let user of message.guild.members.cache.array()) {
-        user.send(`**${args.join(" ")}** | By <@${message.author.id}> (${message.author.tag})`,{files: currentAttachs}).catch(console.log)
+        user.send(`**${args.join(" ")}** | By <@${message.author.id}> (${message.author.tag})`,{files: currentAttachs}).catch()
     }
     
+    message.channel.send(`Successfully sent your assignment to all students' Direct Messages.`)
 };
