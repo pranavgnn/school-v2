@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const fs = require('fs')
 
 const {
-    TOKEN,
     PREFIX,
     OWNER,
     STAFF
@@ -25,6 +24,7 @@ function loadCmds() {
 };
 
 bot.on('ready', () => {
+    require('./alive.js')
     console.log(`${bot.user.username} came online!`);
     bot.user.setPresence({ activity: { name: `${PREFIX}submit | ${bot.users.cache.size} students`}})
     .then(console.log(`Changed the presence of ${bot.user.username} to '${bot.user.presence.activities[0]}'.`))
@@ -94,4 +94,4 @@ bot.on('message', message => {
     cmd.run(bot, message, args);
 });
 
-bot.login(TOKEN);
+bot.login("NzMzNjY3OTY2ODAxMTQ5OTUz.XxGjYw.5hg7o6W9FioOU-f4QYjCFYI4Tkc");
