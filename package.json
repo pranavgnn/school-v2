@@ -14,8 +14,8 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.2.0",
+    "express": "^4.17.1",
     "pngjs": "^5.0.0",
-    "request": "^2.88.2",
-    "express": "^4.17.1"
+    "request": "^2.88.2"
   }
 }
