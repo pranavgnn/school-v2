@@ -94,4 +94,4 @@ bot.on('message', message => {
     cmd.run(bot, message, args);
 });
 
-bot.login("NzMzNjY3OTY2ODAxMTQ5OTUz.XxGjYw.5hg7o6W9FioOU-f4QYjCFYI4Tkc");
+bot.login("token");
